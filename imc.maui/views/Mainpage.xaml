@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="imc.maui.views.Mainpage"
+             Title="Índice de masa corporal">
+    <ScrollView>
+        <VerticalStackLayout 
+            Margin="24"
+            Spacing="24">
+            <Border
+            Stroke="LightGray"
+            StrokeThickness="2"
+        >
+                <VerticalStackLayout
+            Padding="18"
+            Spacing="8">
+                    <Label
+                Text="propocione el peso en kilogramos:">
+
+                    </Label>
+                    <Entry x:Name="PesoEntry">
+                        
+                    </Entry>
+                    <Label
+                Text="propocione la estaltura en metros:">
+
+                    </Label>
+                    <Entry
+                        x:Name="EstaturaEntry">
+                        
+                    </Entry>
+                </VerticalStackLayout>
+            </Border>
+            <HorizontalStackLayout 
+                    HorizontalOptions="Center"
+                    Margin="16"
+                    Spacing="24">
+                <Button 
+                    Text="calcular"
+                    BackgroundColor="Green"
+                    Clicked="OnCalcularButtonClicked">
+
+                </Button>
+                <Button 
+                    Text="limpiar"
+                    Clicked="OnLimpiarButtonClicked">
+                    
+                </Button>
+            </HorizontalStackLayout>
+            <Border 
+                    Stroke="LightGray"
+                    StrokeThickness="2"
+                    >
+                <Border.StrokeShape>
+                    <RoundRectangle
+                        CornerRadius="10">
+                    </RoundRectangle>
+                </Border.StrokeShape>
+                <VerticalStackLayout 
+            Padding="18"
+            Spacing="8">
+                    <Label Text="el indice de masa corporal es:"></Label>
+                    <Label Text="23.45" 
+                           HorizontalOptions="Center"
+                           FontSize="Medium" 
+                           FontAttributes="Bold"
+                           x:Name="Imclabel">
+                        
+                    </Label>
+                    <Label Text="La situacion nutricional de la persona es:"></Label>
+                    <Label Text="peso normal" 
+                           HorizontalOptions="Center" 
+                           FontSize="Medium" 
+                           FontAttributes="Bold"
+                           x:Name="SituacionNutricionalLabel">
+                        
+                    </Label>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
