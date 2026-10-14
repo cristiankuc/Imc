@@ -27,10 +27,10 @@
                         Grid.Row="0">
 
                     </Label>
-                    <Entry x:Name="PesoEntry"
+                    <Entry 
                            Grid.Row="0"
-                           Grid.Column="1">
-                        
+                           Grid.Column="1"
+                           Text="{Binding Path=Peso}">
                     </Entry>
                     <Label
                 Text="propocione la estaltura en metros:"
@@ -39,8 +39,8 @@
 
                     </Label>
                     <Entry
-                        x:Name="EstaturaEntry"
-                        Grid.Column="0"
+                        Text="{Binding Path=Estatura}"
+                        Grid.Column="1"
                         Grid.Row="1"
                         >
                         
@@ -57,12 +57,13 @@
                 <Button 
                     Text="calcular"
                     BackgroundColor="Green"
-                    Clicked="OnCalcularButtonClicked">
+                    Command="{Binding Path=CalcularCommand}"
+                    >
 
                 </Button>
                 <Button 
                     Text="limpiar"
-                    Clicked="OnLimpiarButtonClicked">
+                    Command="{Binding Path=LimpiarCommand}">
                     
                 </Button>
             </HorizontalStackLayout>
@@ -81,19 +82,19 @@
             Padding="18"
             Spacing="8">
                     <Label Text="el indice de masa corporal es:"></Label>
-                    <Label Text="23.45" 
+                    <Label Text="{Binding Path=Imc}" 
                            HorizontalOptions="Center"
                            FontSize="Medium" 
                            FontAttributes="Bold"
-                           x:Name="Imclabel">
+                           >
                         
                     </Label>
                     <Label Text="La situacion nutricional de la persona es:"></Label>
-                    <Label Text="peso normal" 
+                    <Label Text="{Binding Path=EstadoNutricional} " 
                            HorizontalOptions="Center" 
                            FontSize="Medium" 
                            FontAttributes="Bold"
-                           x:Name="SituacionNutricionalLabel">
+                           >
                         
                     </Label>
                 </VerticalStackLayout>
